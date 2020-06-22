@@ -78,8 +78,6 @@ public:
 
 
 
-
-
 int main()
 {
     Linkedlist list;
