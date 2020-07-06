@@ -40,6 +40,29 @@ void inorder(Node *t)
     if(t->right)
         inorder(t->right);
 }
+
+void inorder_2(Node *root)
+{
+    if(root == NULL) return;
+        inorder(root->left);
+    cout<<root->data<<" ";
+        inorder(root->right);
+}
+void preOrder(Node *root)
+{
+    if(root == NULL) return;
+    cout<<root->data<<" ";
+    preOrder(root->left);
+    preOrder(root->right);
+}
+void postOrder(Node *root)
+{
+    if(root == NULL) return;
+        postOrder(root->left);
+        postOrder(root->right);
+    cout<<root->data<<" ";
+}
+
 bool Search(Node* root,int data)
 {
     if(root == NULL) return false;
@@ -110,6 +133,7 @@ int findMax_iterative(Node* head)
     return head->data;
 }
 
+
 int main()
 {
     Node* root = NULL;
@@ -123,6 +147,12 @@ int main()
     root = insert(root,90);
 
     inorder(root);
+    cout<<endl;
+    inorder_2(root);
+    cout<<endl;
+    preOrder(root);
+    cout<<endl;
+    postOrder(root);
     cout<<endl;
 
     if(Search(root,68))
