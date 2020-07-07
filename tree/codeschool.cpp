@@ -133,6 +133,14 @@ int findMax_iterative(Node* head)
     return head->data;
 }
 
+bool bstUtil(Node* root,int minValue,int maxValue){
+    if(root == NULL) return true;
+    if(root->data > minValue && root->data < maxValue && bstUtil(root->left,minValue,root->data) && bstUtil(root->right,root->data,maxValue)) return true;
+    else return false;
+}
+bool checkBST(Node* root) {
+    return bstUtil(root,INT_MIN,INT_MAX);
+}
 
 int main()
 {
@@ -164,6 +172,9 @@ int main()
     cout<<"max value using iterative: "<<findMax_iterative(root)<<endl;
     cout<<"min value: "<<findMin(root)<<endl;
     cout<<"min value using iterative: "<<findMin_iterative(root)<<endl;
+
+    if(checkBST(root)) cout<<"\n yes binary tree."<<endl;
+    else cout<<"not binary tree."<<endl;
 
     return 0;
 }
