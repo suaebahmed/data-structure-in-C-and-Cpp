@@ -72,6 +72,18 @@ public:
         cout<<endl;
     }
 };
+Node* reverseDoublyLinked()
+{
+    Node* curr = head;
+    Node* prev = NULL;
+    Node* tmp = NULL;
+
+    while(curr != NULL)
+    {
+
+    }
+}
+
 int main()
 {
     dublelinkList list;
