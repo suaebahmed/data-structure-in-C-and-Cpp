@@ -142,6 +142,45 @@ bool checkBST(Node* root) {
     return bstUtil(root,INT_MIN,INT_MAX);
 }
 
+Node* delete_treeNode(Node* root,int data)
+{
+    if(root == NULL) return root;
+    else if(data < root->data)
+        root->left = delete_treeNode(root->left,data);
+    else if(data > root->data)
+        root->right = delete_treeNode(root->right,data);
+    else
+    {
+        /// case 1: leaf node
+        if(root->left == NULL && root->right == NULL)
+        {
+            delete root;
+            root = NULL;
+        }
+        /// case 2: has one child
+        else if(root->left == NULL)
+        {
+            Node* temp = root;
+            root = root->right;
+            delete temp;
+        }
+        else if(root->right == NULL)
+        {
+            Node* temp = root;
+            root = root->left;
+            delete temp;
+
+        }
+        /// case 3: has two child
+        else{
+            int temp = findMax(root);
+            root->data = temp;
+            root->right = delete_treeNode(root->right,temp);
+        }
+    }
+    return root;
+}
+
 int main()
 {
     Node* root = NULL;
@@ -153,6 +192,9 @@ int main()
     root = insert(root,60);
     root = insert(root,15);
     root = insert(root,90);
+
+    // delete any node
+    delete_treeNode(root,60);
 
     inorder(root);
     cout<<endl;
