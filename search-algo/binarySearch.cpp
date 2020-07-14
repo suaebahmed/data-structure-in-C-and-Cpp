@@ -1,37 +1,29 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <math.h>
+#define MAX 100000
 
 using namespace std;
 
-void binarySearch(int arr[],int n,int target)
+int binary_search()
 {
     int low = 0;
     int high = n-1;
-    int max;
+    int mid;
 
-    while(low <= high)
+    while(low<=high)
     {
-        max = (low+high)/2; // 0+4/2 = 2;
-        max = floor(max);
-
-        if(target > arr[max])
-            low = max +1;
-        else if(target < arr[max])
-            high = max + 1;
-        else if(target == arr[max])
-        {
-            cout<<"we found it"<<endl;
-            return;
-        }
+        mid = floor((low+high)/2);
+        if(target > arr[mid])
+            low = mid+1;
+        else if(target < arr[mid])
+            high = mid - 1;
+        else
+            return mid;
     }
-    cout<<"Not found it"<<endl;
+    return -1;
 }
 
+int main() {
 
-int main()
-{
-    int arr[] = {5,10,20,30,40};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    binarySearch(arr,n,30);
     return 0;
 }
