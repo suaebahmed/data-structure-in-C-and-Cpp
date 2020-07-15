@@ -21,8 +21,8 @@ int main()
     //istream& getline (char* s, streamsize n, char delim );
 
     stringstream ss;
-    ss.str("set the string value");
-    cout<<ss.str()<<endl;
+    ss.str("set the string value"); // setter
+    cout<<ss.str()<<endl; // getter
 
     char name[256], title[256];
     cout << "Please, enter your name: ";
