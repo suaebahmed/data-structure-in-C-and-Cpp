@@ -1,58 +1,33 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<sstream>
 
 using namespace std;
 
+string timeConversion(string str) {
+    stringstream ss(str),result;
+    char c1,c2,c3;
+    int h,m,s;
+    string pm;
 
-void timeConversion(string s) {
-    istringstream ss(s);
+    ss >>h>>c1>>m>>c1>>s>>pm;
 
+    if(h == 12 && pm == "AM") h-=12;
+    if(h != 12 && pm == "PM") h+=12;
+
+    //cout.precision(04);
+    //cout<<h<<":"<<fixed<<m<<":"<<s<<endl;
+    //printf("%.2d:%.2d:%.2d",h,m,s);
+
+    result <<h<<":"<<m<<":"<<s;
+    return result.str();
 }
 
 int main()
 {
     string s = "07:05:45PM"; /// 19:05:45
-    string s1 = "1:00:00PM"; /// 13:00
-    string s2("Hello world ");
-    string str ("now step live...");
-    for (string::reverse_iterator rit=str.rbegin(); rit!=str.rend(); ++rit)
-    cout << *rit;
-    cout<<endl;
-    // string::iterator it=s1.begin();
-
-
-    //s1.bengin() Returns an iterator pointing to the first character of the string.
-    //s1.end()    Return iterator to end
-    //s1.rbegin() Return reverse ||
-    //s1.rend()   ||
-
-    //s2.append(s);  ==> s2+=s;    operator +=
-    //s1.assign(s); s1 = s2 + s;   operator+
-    //                             operator[]
-    //s2.clear(); Erases the content of string Which become empty();
-
-    //s2.pop_back() Erases the last character of the string,
-    //s2.push_back() Append character to string
-    //s2.erase(10,20)
-    //s2.erase(begin()+10,begin()+20)
-    //s2.erase(begin()+10,end()-10)
-    //s1.erase(4); // delete a character 4th position
-
-    for(int i=0; i<s1.length(); i++)
-        cout<<"wow: "<<s1[i]<<endl;
-
-
-    cout<<s2+s<<endl;
-    cout<<s2.length()<<endl;
-    cout<<"return first char: "<<*s2.begin()<<endl;
-
-    string strsub ="We think in generalities, but we live in details.";// (quoting Alfred N. Whitehead)
-    string str22 = strsub.substr (3,5);     // "think"
-    size_t pos = strsub.find("live");      // position of "live" in str
-    string str33 = strsub.substr (pos);     // get from "live" to the end
-    cout << str22 << ' ' << str33 << '\n';
-
-
-    timeConversion(s);
+    string s1 = "1:00:00PM"; /// 13:00:00
+    cout<<timeConversion(s)<<endl;
+    cout<<timeConversion(s1)<<endl;
 
     return 0;
 }

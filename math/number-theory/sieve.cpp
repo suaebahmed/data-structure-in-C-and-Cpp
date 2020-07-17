@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define mx 100
+#define mx 980
 
 using namespace std;
 int is_prime[mx];
@@ -19,6 +19,15 @@ void sieve()
             for(int j=i*i; j<mx; j+=i) /// power of i=5 i*i=25;
                 is_prime[j] = 0;
         }
+        /*
+        ----not much efficient than above code---
+        if(is_prime[i]){
+          for(var j=i*i; j<=max; j++){
+            if(j%i==0)  // we want to check weather J is divisible by i;
+              is_prime[j] = 0
+          }
+        }
+        */
     }
 }
 int main()
