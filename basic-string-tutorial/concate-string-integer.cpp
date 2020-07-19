@@ -8,7 +8,7 @@
 using namespace std;
 
 string timeConversion(string str) {
-    stringstream ss(str),result;
+    stringstream ss(str);
     char c1,c2,c3;
     int h,m,s;
     string pm;
@@ -23,6 +23,7 @@ string timeConversion(string str) {
     //return "+h+":"+m+":"+s+";
 
     // -- 1st way --------
+    stringstream result;
     result <<h<<":"<<m<<":"<<s;
     return result.str();
 
