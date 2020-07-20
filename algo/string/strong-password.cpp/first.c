@@ -10,6 +10,7 @@ int main()
 
     char x = 'a'+r;
     printf("%c\n",x);
+
     printf("%d\n",' ');
 
     return 0;
