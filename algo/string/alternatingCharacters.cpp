@@ -4,7 +4,7 @@
 
 using namespace std;
 
-
+/// time limit exceded
 string alternatingCharacters(string s) {
 
     int i=1;
@@ -21,7 +21,7 @@ string alternatingCharacters(string s) {
     }
     return s;
 }
-
+/// much more effi
 string alternatingCharacters2(string s){
     string stk;
     int count = 0;
@@ -35,7 +35,6 @@ string alternatingCharacters2(string s){
         else
             stk.push_back(s[i]);
     }
-    cout<<"cnt"<<count<<endl;
     return s;
 }
 
