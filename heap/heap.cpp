@@ -42,7 +42,7 @@ void heapifyUp_bottom(int arr[],int n,int i)
     int right = 2*i+2;
     int bigIE = i;
 
-    if(left < n && arr[left] > arr[i])
+    if(left < n && arr[left] > arr[bigIE])
         bigIE = left;
     if(right < n && arr[right] > arr[bigIE]) // wrong..i=>bigIE
         bigIE = right;

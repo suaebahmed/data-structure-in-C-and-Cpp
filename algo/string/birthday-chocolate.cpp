@@ -29,7 +29,7 @@ int getWays(vector<int> s, int d, int m)
 
 
     // Complete this function
-    int sum[105];
+    int sum[105]={0};
     int count=0;
     sum[0]=0;
     int n = s.size();
@@ -37,7 +37,7 @@ int getWays(vector<int> s, int d, int m)
     for(int i=0;i<n;i++)
         sum[i+1]=sum[i]+s[i];
 
-    for(int i=0; i<n; i++)
+    for(int i=0; i<100; i++)
         cout<<sum[i]<<" ";
     cout<<endl;
 

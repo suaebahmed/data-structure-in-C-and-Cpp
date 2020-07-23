@@ -25,8 +25,8 @@ int main()
 {
     string s="aaabccddd";
     cout<<superReducedString(s)<<endl;
-    cout<<superReducedString("bbb")<<endl;
-    cout<<superReducedString("aa")<<endl;
+    cout<<superReducedString("bbbb")<<endl;
+    cout<<superReducedString("aaa")<<endl;
 
     return 0;
 }
