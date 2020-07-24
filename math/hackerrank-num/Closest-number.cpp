@@ -1,20 +1,18 @@
 #include<iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 // i did't solve it;
 
 int main()
 {
-    cout<<349%4<<endl;
-    cout<<395%4<<endl;
-    cout<<(1/16)%4<<endl;
-    cout<<endl;
+    cout<<349-(349%4)<<endl;
+    cout<<395-(395%7)<<endl;
+    cout<<(1/16)-((1/16)%2)<<endl;
 
-    cout<<0%7<<endl; //0
-    cout<<2%10<<endl; //2
-    cout<<1%7<<endl; //1
-    cout<<1%10<<endl; //1
+    cout<<pow(1,-2)<<endl; // a is 1 and b is negative
+    cout<<pow(4,-2)<<endl; // a is 4 and b is negative
+
 
     return 0;
 }

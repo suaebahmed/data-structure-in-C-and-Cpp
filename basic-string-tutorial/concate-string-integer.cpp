@@ -1,7 +1,5 @@
-#include<iostream>
-#include<stack>
-#include<sstream>
-#include<stdio.h>
+#include<bits/stdc++.h>
+
 /*
     How do you concatenate strings and integers in C++? [duplicate]
 */
@@ -24,7 +22,9 @@ string timeConversion(string str) {
 
     // -- 1st way --------
     stringstream result;
-    result <<h<<":"<<m<<":"<<s;
+    result <<setw(2)<<setfill('0')<<h<<":"
+           <<setw(2)<<setfill('0')<<m<<":"
+           <<setw(2)<<setfill('0')<<s;
     return result.str();
 
     // --- 2nd way -------

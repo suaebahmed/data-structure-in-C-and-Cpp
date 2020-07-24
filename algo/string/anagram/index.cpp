@@ -18,11 +18,21 @@ string toUppercase(string s)
     return s;
 }
 
-void split(string s)
+void split()
 {
-    string a,b;
-    int partition = s.length()/2;
-    cout<<partition;
+    string a="scott tiger mushroom";
+    string delimiter = " ";
+
+    size_t  pos = 0;
+
+    while((pos = a.find(delimiter)) != string::npos)
+    {
+        //cout<<"pos: "<<pos;
+        string token = a.substr(0,pos);
+        cout<<token<<endl;
+        a.erase(0,pos+delimiter.length());
+    }
+    cout<<a<<endl;
 }
 
 string Replace(string s,string thing,string i)
@@ -41,9 +51,8 @@ string Replace(string s,string thing,string i)
 int main()
 {
 
-    split("aaabbb");
-
-    cout<<toUppercase("Suaeb ahmed")<<endl;
-    cout<<Replace("hafiz md Suaeb ahmed mia","_"," ")<<endl;
+    split();
+    //cout<<toUppercase("Suaeb ahmed")<<endl;
+    //cout<<Replace("hafiz md Suaeb ahmed mia","_"," ")<<endl;
     return 0;
 }
