@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define mx 980
+#define mx 1000
 
 using namespace std;
 int is_prime[mx];
@@ -30,14 +30,34 @@ void sieve()
         */
     }
 }
+void rangePrime(int l,int h)
+{
+    int sum = 0;
+
+    for(int i=l; i<=h; i++)
+    {
+        if(is_prime[i])
+        {
+            cout<<i<<" ";
+            sum++;
+        }
+    }
+    cout<<"\ntotal number of prime: "<<sum<<endl;
+}
+
 int main()
 {
     sieve();
-    ///-- now genarate prime number --
+    // now genarate prime number --
     for(int i=0; i<mx; i++)
     {
         if(is_prime[i])
         cout<<i<<" ";
     }
+
+    cout<<"\n----------------------"<<endl;
+    rangePrime(28,40);
+    cout<<"\n----------------------"<<endl;
+
     return 0;
 }
