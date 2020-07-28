@@ -31,9 +31,29 @@ int beautifulDays(int a, int j, int k)
     return count;
 }
 
+int beautifulDays2(int i, int j, int k)
+{
+    int count=0;
+    for(int l=i;l<=j;l++)
+    {
+        int p=l;
+        int sum=0;
+        while(p)
+        {
+            int q=p%10;
+            sum=(sum*10)+q;
+            p=p/10;
+        }
+        int diff=abs(l-sum);
+        if(diff%k==0) count++;
+    }
+    return count;
+}
 
 int main()
 {
-    cout<<beautifulDays(20,23, 6)<<endl;
+    //cout<<beautifulDays(20,23, 6)<<endl;
+    cout<<beautifulDays2(20,23, 6)<<endl;
+
     return 0;
 }

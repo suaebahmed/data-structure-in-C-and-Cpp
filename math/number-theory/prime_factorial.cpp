@@ -14,7 +14,7 @@ void prime_fac(int n)
                 cnt++;
                 n /= i;
             }
-            cout<<i<<"^"<<cnt<<" ";
+            cout<<i<<"^"<<cnt<<"*";
         }
     }
 }
@@ -41,6 +41,6 @@ void prime_fac2(int n)
 
 int main()
 {
-    prime_fac2(2358811);
+    prime_fac2(16);
     return 0;
 }
