@@ -27,7 +27,7 @@ int pow2(int base ,int n)
 
 int main()
 {
-    int res = pow2(2,8);
+    int res = pow2(2,100);
     cout<<res<<endl;
     return 0;
 }
