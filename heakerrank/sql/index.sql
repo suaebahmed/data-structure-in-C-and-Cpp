@@ -1,2 +1,4 @@
 //countrycode is string
 SELECT * FROM CITY WHERE POPULATION > 10000 AND COUNTRYCODE = 'USA';
+SELECT * FROM CITY WHERE cityname REGEXP '[^aeiou].*';
+
