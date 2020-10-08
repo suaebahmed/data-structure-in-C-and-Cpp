@@ -2,7 +2,7 @@
 using namespace std;
 
 #define FOR(i,a,b) for(int i=a; i<= b; ++i)
-const int mx = 1e4+1;
+const int mx = 1e1+1;
 /**
 Input:
 2

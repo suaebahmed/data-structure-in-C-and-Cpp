@@ -8,35 +8,36 @@ int main()
     int k_size,k_item;
 
     string line;
-    getline(cin,line);
-    istringstream ss(line);
+    //getline(cin,line);
+    //istringstream ss(line);
 
-    ss >>k_size;
-    for(int j=0; j<k_size; j++){
-        ss >> k_item;
-        cout<<" | "<<k_item;
-    }
+    //ss >>k_size;
+    //for(int j=0; j<k_size; j++){
+     //   ss >> k_item;
+      //  cout<<" | "<<k_item;
+    //}
 
     //istream& getline (char* s, streamsize n );
     //istream& getline (char* s, streamsize n, char delim );
 
-    stringstream ss;
-    ss.str("set the string value"); // setter
-    cout<<ss.str()<<endl; // getter
+    //stringstream ss;
+    //ss.str("set the string value"); // setter
+    //cout<<ss.str()<<endl; // getter
 
     char name[256], title[256];
     cout << "Please, enter your name: ";
     cin.getline (name,256);
-    cout << "Please, enter your favourite movie: ";
+    cout << " Please, enter your favourite movie: ";
     cin.getline (title,256);
-    cout<<name<<"'s favourite movie "<<title;
+    cout<<name<<"'s favourite movie "<<title<<endl;
 
-    char first, last;
-    cout << "Please, enter your first name followed by your surname: ";
-    first = cin.get();     // get one character
-    cin.ignore(256,' ');   // ignore until space
-    last = cin.get();      // get one character
-    cout << "Your initials are " << first << last << '\n';
+
+    //char first, last;
+    //cout << "Please, enter your first name followed by your surname: ";
+    //first = cin.get();     // get one character
+    //cin.ignore(256,' ');   // ignore until space
+    //last = cin.get();      // get one character
+    //cout << "Your initials are " << first << last << '\n';
 
     return 0;
 }

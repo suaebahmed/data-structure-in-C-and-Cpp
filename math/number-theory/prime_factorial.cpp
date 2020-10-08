@@ -41,6 +41,6 @@ void prime_fac2(int n)
 
 int main()
 {
-    prime_fac2(16);
+    prime_fac(432);
     return 0;
 }
