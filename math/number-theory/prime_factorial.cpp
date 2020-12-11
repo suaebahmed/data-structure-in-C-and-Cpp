@@ -35,12 +35,12 @@ void prime_fac2(int n)
             cout<<i<<"^"<<cnt<<" ";
         }
     }
-    if(n>1)
-        cout<<n<<"^^"<<1<<endl;
+    // if n is prime
+    if(n>1) cout<<n<<"^"<<1<<endl;
 }
 
 int main()
 {
-    prime_fac(432);
+    prime_fac2(2);
     return 0;
 }

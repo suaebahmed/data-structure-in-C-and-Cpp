@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#define deb(x) cout<<"For debug : "<<x<<endl;
 
 using namespace std;
 

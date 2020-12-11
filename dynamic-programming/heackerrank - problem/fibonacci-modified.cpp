@@ -11,7 +11,6 @@ ll power(ll b,int n){
     }
     return res;
 }
-/// heackerrank problem -------
 
 int fibonacciModified(int t1, int t2, int n)
 {
